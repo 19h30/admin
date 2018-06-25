@@ -1,0 +1,47 @@
+{{#section 'title'}}
+	<li class="breadcrumb-item active">
+   	 <a href="/category">Category</a>
+  	</li>
+	<li class="breadcrumb-item active">
+	  <a href="#">Add Category</a>
+	</li>
+{{/section}}
+
+{{#if showAlert}}
+<div class="alert alert-success">
+	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+	Product added.
+</div>
+{{/if}}
+
+<form action="" method="POST" role="form">
+	<div class="form-group">
+		<label for="">Product Name</label>
+		<input type="text" class="form-control" id="" name="ProName" placeholder="Product">
+	</div>
+	<div class="form-group">
+		<label for="">Short Description</label>
+		<textarea class="form-control" name="TinyDes" rows="5" cols="30" placeholder="Short Description"></textarea>
+	</div>
+	<div class="form-group">
+		<label for="">Full Description</label>
+		<textarea class="form-control" name="FullDes" rows="10" cols="30" placeholder="Full Description"></textarea>
+	</div>
+	<div class="form-group">
+		<label for="">Price</label>
+		<input type="text" class="form-control" id="" name="Price" placeholder="Price">
+	</div>
+	<input type="hidden" id="" name="CatID" value="{{CatID}}"> 
+	<div class="form-group">
+		<label for="">Quantity</label>
+		<input type="text" class="form-control" id="" name="Quantity" placeholder="Quantity">
+	</div>
+	<a class="btn btn-default" href="/category" role="button">
+		<span class="glyphicon glyphicon-arrow-left"></span>
+		View list
+	</a>
+	<button type="submit" class="btn btn-primary">
+		<span class="glyphicon glyphicon-check"></span>
+		Save
+	</button>
+</form>
