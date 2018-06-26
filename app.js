@@ -50,7 +50,7 @@ var sessionStore = new MySQLStore({
     port: 3306,
     user: 'root',
     password: '',
-    database: 'qlbh',
+    database: 'laptoponline',
     createDatabaseTable: true,
     schema: {
         tableName: 'sessions',

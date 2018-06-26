@@ -27,7 +27,7 @@ exports.single = proId => {
 }
 
 exports.add = (p) => {
-    var sql = `insert into products(ProName, TinyDes, FullDes, Price, CatID, Quantity) values('${p.ProName}', '${p.TinyDes}', '${p.FullDes}', '${p.Price}', '${p.CatID}', ${p.Quantity})`;
+    var sql = `insert into products(ProName, Overview, Detail, Price, CatID, Quantity, Views) values('${p.ProName}', '${p.Overview}', '${p.Detail}', '${p.Price}', '${p.CatID}', ${p.Quantity}, ${p.Views})`;
     return db.save(sql);
 }
 
@@ -37,6 +37,6 @@ exports.delete = (id) => {
 }
 
 exports.update = (p) => {
-    var sql = `update products set ProName = '${p.ProName}', TinyDes = '${p.TinyDes}', FullDes = '${p.FullDes}', Price = '${p.Price}', CatID = '${p.CatID}', Quantity = '${p.Quantity}' where ProID = ${p.ProID}`;
+    var sql = `update products set ProName = '${p.ProName}', Overview = '${p.Overview}', Detail = '${p.Detail}', Price = '${p.Price}', CatID = '${p.CatID}', Quantity = '${p.Quantity}', Views = '${p.Views}' where ProID = ${p.ProID}`;
     return db.save(sql);
 }
