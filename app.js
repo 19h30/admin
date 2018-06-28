@@ -15,6 +15,7 @@ var handleLayoutMDW = require('./middle-wares/handleLayout'),
 var homeController = require('./controllers/homeController'),
     categoryController = require('./controllers/categoryController'),
     productController = require('./controllers/productController'),
+    orderController = require('./controllers/orderController');
     accountController = require('./controllers/accountController'),
     cartController = require('./controllers/cartController');
 
@@ -79,6 +80,7 @@ app.get('/', (req, res) => {
 app.use('/home', homeController);
 app.use('/category', categoryController);
 app.use('/product', productController);
+app.use('/orders', orderController);
 app.use('/account', accountController);
 app.use('/cart', restrict, cartController);
 
